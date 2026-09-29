@@ -69,39 +69,148 @@ footer{background:#0e172b;color:#b9c2d6;padding:34px 0}.footer-grid{display:flex
     <div class="card"><div class="icon">✓</div><h3>Rapid classification</h3><p>Present an interpretable quality grade with a confidence score for the demo result.</p></div>  
     <div class="card"><div class="icon">▣</div><h3>Digital decision support</h3><p>Convert the analysis into recommendations, reports, history and trend views for farmers.</p></div>  
   </div>  
-</div></section>  <section id="demo"><div class="container">  
-  <div class="section-head"><div><h2>Interactive AI analysis demo</h2><p>Select Feed or Silage, upload an image and run the prototype simulation. Results are demonstrative until a real ML model is connected.</p></div></div>  
-  <div class="demo">  
-    <div class="demo-top">  
-      <div class="drop">  
-        <h3>1 · Sample input</h3>  
-        <select id="sampleType" style="padding:11px;border-radius:10px;border:1px solid #d9deea;margin:8px">  
-          <option>Feed</option><option>Silage</option>  
-        </select>  
-        <br><br>  
-        <label class="upload-label" for="file">Upload image</label>  
-        <input id="file" type="file" accept="image/*">  
-        <img id="preview" class="preview" alt="Selected sample preview">  
-        <p id="fileName" style="color:#68738a;font-size:13px">No image selected</p>  
-        <button class="btn primary" id="analyze" type="button">Run demo analysis</button>  
-      </div>  
-      <div>  
-        <h3>2 · Quality report</h3>  
-        <div class="results">  
-          <div class="result"><small>Quality grade</small><div class="grade" id="grade">—</div></div>  
-          <div class="result"><small>Confidence</small><strong id="confidence">—</strong></div>  
-          <div class="result"><small>Moisture</small><strong id="moisture">—</strong></div>  
-          <div class="result"><small>Temperature</small><strong id="temp">—</strong></div>  
-          <div class="result"><small>pH</small><strong id="ph">—</strong></div>  
-          <div class="result"><small>Spoilage risk</small><strong id="risk">—</strong></div>  
-          <div class="result"><small>Visual colour</small><strong id="colour">—</strong></div>  
-          <div class="result"><small>Texture</small><strong id="texture">—</strong></div>  
-        </div>  
-        <div class="report" id="recommendation">Upload a sample and run the demo to generate a recommendation.</div>  
-      </div>  
-    </div>  
-  </div>  
-</div></section>  <section id="features"><div class="container">  
+</div></section> <section id="demo">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <h2>Interactive AI analysis demo</h2>
+        <p>
+          Upload a feed or silage image. The prototype will automatically
+          identify the sample type and generate a quality assessment.
+        </p>
+      </div>
+    </div>
+
+    <div class="demo">
+
+      <div class="demo-top">
+
+        <!-- LEFT SIDE -->
+        <div class="drop">
+
+          <h3>1 · Sample input</h3>
+
+          <p>
+            Upload an image of your feed or silage sample.
+            No manual selection is required.
+          </p>
+
+          <label class="upload-label" for="file">
+            Upload Feed / Silage Image
+          </label>
+
+          <input id="file" type="file" accept="image/*">
+
+          <img
+            id="preview"
+            class="preview"
+            alt="Selected feed or silage sample"
+          >
+
+          <p id="fileName" class="file-name">
+            No image selected
+          </p>
+
+          <!-- AUTOMATIC SAMPLE DETECTION -->
+          <div class="detect-box">
+
+            <small>AI Sample Detection</small>
+
+            <div id="detectedType" class="detected-type">
+              Waiting for image...
+            </div>
+
+            <div id="detectConfidence" class="detect-confidence">
+              Upload an image to detect Feed or Silage.
+            </div>
+
+          </div>
+
+          <button
+            class="btn primary analyze-btn"
+            id="analyze"
+            type="button"
+          >
+            Run AI Quality Analysis
+          </button>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="report-area">
+
+          <h3>2 · Quality report</h3>
+
+          <div class="results">
+
+            <div class="result">
+              <small>Sample type</small>
+              <strong id="sampleResult">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Quality grade</small>
+              <div class="grade" id="grade">—</div>
+            </div>
+
+            <div class="result">
+              <small>Confidence</small>
+              <strong id="confidence">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Moisture</small>
+              <strong id="moisture">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Temperature</small>
+              <strong id="temp">—</strong>
+            </div>
+
+            <div class="result">
+              <small>pH</small>
+              <strong id="ph">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Spoilage risk</small>
+              <strong id="risk">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Visual colour</small>
+              <strong id="colour">—</strong>
+            </div>
+
+            <div class="result">
+              <small>Texture</small>
+              <strong id="texture">—</strong>
+            </div>
+
+          </div>
+
+          <div class="report" id="recommendation">
+            Upload a sample and run the AI demo to generate
+            a quality recommendation.
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="demo-note">
+        Prototype demonstration: sample-type detection and quality values
+        are simulated for presentation. A trained image-classification
+        model can be connected later for real Feed/Silage recognition.
+      </div>
+
+    </div>
+
+  </div>
+</section>  <section id="features"><div class="container">  
   <div class="section-head"><div><h2>Feature suite</h2><p>Designed around the requirements you selected, with sensor-data dashboards intentionally excluded from this portfolio.</p></div></div>  
   <div class="grid">  
     <div class="card"><div class="icon">◉</div><h3>Feed Quality Analysis</h3><p>Quick screening workflow for feed samples.</p></div>  
