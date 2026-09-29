@@ -128,6 +128,26 @@ h1{
   border:1px solid var(--line);
   color:var(--navy)
 }
+.solution-btn{
+  background:#14804a;
+  color:#fff;
+  border:1px solid #14804a;
+  display:inline-flex;
+  align-items:center;
+  gap:9px
+}
+.solution-btn:hover{
+  background:#0f6b3e;
+}
+.solution-icon{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.20);
+  font-size:14px
+}
 .hero-card{
   background:linear-gradient(150deg,#14213d,#3346a8);
   border-radius:28px;
@@ -253,12 +273,13 @@ section{padding:72px 0}
   overflow:hidden;
   background:
     linear-gradient(
-      rgba(12,23,48,.90),
-      rgba(12,23,48,.94)
+      rgba(12,23,48,.62),
+      rgba(12,23,48,.70)
     ),
     url("https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&w=1800&q=85");
   background-size:cover;
-  background-position:center
+  background-position:center;
+  background-attachment:fixed
 }
 #demo .section-head h2{color:#fff}
 #demo .section-head p{color:#cbd5e5}
@@ -392,6 +413,55 @@ section{padding:72px 0}
   font-size:12px
 }
 
+/* TEAM DASHBOARD */
+.team-dashboard{
+  background:linear-gradient(135deg,#eefaf5,#f7fbff);
+  border:1px solid #d8eee4;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 12px 35px rgba(20,33,61,.07)
+}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px
+}
+.team-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 7px 22px rgba(20,33,61,.05)
+}
+.team-avatar{
+  width:64px;
+  height:64px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--navy),var(--teal));
+  color:#fff;
+  font-size:22px;
+  font-weight:900
+}
+.team-card h3{
+  margin:7px 0 4px;
+  color:var(--navy)
+}
+.team-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px
+}
+.team-note{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px
+}
+
 .table{
   width:100%;
   border-collapse:collapse
@@ -421,6 +491,7 @@ footer{
 @media(max-width:900px){
   .hero-grid,.demo-top{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
   .workflow{grid-template-columns:1fr 1fr}
   .step:not(:last-child):after{display:none}
   .links{display:none}
@@ -428,6 +499,7 @@ footer{
 @media(max-width:600px){
   .grid{grid-template-columns:1fr}
   .results{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
   section{padding:52px 0}
   h1{letter-spacing:-1px}
 }
@@ -448,7 +520,7 @@ footer{
       <a href="#demo">AI Demo</a>
       <a href="#features">Features</a>
       <a href="#workflow">Workflow</a>
-      <a href="#impact">Impact</a>
+      <a href="#impact">Impact</a><a href="#team">Team</a>
     </nav>
   </div>
 </header>
@@ -467,7 +539,10 @@ footer{
       </p>
       <div class="actions">
         <a class="btn primary" href="#demo">Try AI Demo</a>
-        <a class="btn secondary" href="#workflow">Explore Workflow</a>
+        <a class="btn solution-btn" href="#solution">
+  <span class="solution-icon">✓</span>
+  Explore Solution
+</a>
       </div>
     </div>
 
@@ -906,6 +981,75 @@ footer{
   </div>
 </section>
 
+
+<section id="team">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <h2>Team Dashboard</h2>
+        <p>
+          Meet the CropTechX team behind the Smart Feed & Silage Quality
+          Testing concept.
+        </p>
+      </div>
+    </div>
+
+    <div class="team-dashboard">
+      <div class="team-grid">
+
+        <article class="team-card">
+          <div class="team-avatar">01</div>
+          <h3>A. Jeya Priya</h3>
+          <p><strong>Team Leader / Software Development Engineer</strong></p>
+          <p>Led the software development and coordinated the integration of feed and silage quality assessment, quality classification logic, and the farmer-focused testing workflow.</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-avatar">02</div>
+          <h3>M. Devi Meenal</h3>
+          <p><strong>Feed &amp; Silage Quality Assessment Analyst</strong></p>
+          <p>Analyzed feed and silage quality parameters, assessment practices, and dairy-farm requirements to support standardized quality evaluation.</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-avatar">03</div>
+          <h3>K. Vengadeswari</h3>
+          <p><strong>AI &amp; Image Processing Engineer</strong></p>
+          <p>Worked on AI-based image analysis to identify visible feed and silage quality characteristics and support automated quality classification.</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-avatar">04</div>
+          <h3>V. Sathana</h3>
+          <p><strong>Data Visualization &amp; Presentation Designer</strong></p>
+          <p>Designed clear visual representations of feed and silage quality results, quality grades, and assessment outputs for easy interpretation by users.</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-avatar">05</div>
+          <h3>S. Nisha Sri</h3>
+          <p><strong>UI/UX &amp; Visual Communication Designer</strong></p>
+          <p>Designed the user interface and visual elements to make feed and silage quality assessment simple, clear, and user-friendly.</p>
+        </article>
+
+        <article class="team-card">
+          <div class="team-avatar">06</div>
+          <h3>A. Jayashree</h3>
+          <p><strong>Quality Standards &amp; Validation Analyst</strong></p>
+          <p>Supported quality-parameter validation and documentation to improve consistency in feed and silage quality assessment and reduce uncertainty during farm-level evaluation.</p>
+        </article>
+
+      </div>
+
+      <div class="team-note">
+        CropTechX Team · Smart Feed & Silage Quality Testing System
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section>
   <div class="container">
 
@@ -954,7 +1098,7 @@ footer{
       Smart Feed & Silage Quality Intelligence
     </div>
     <div>
-      Team details and official prototype link can be added in the final editing step.
+      Team details can be added in the Team Dashboard section above.
     </div>
   </div>
 </footer>
