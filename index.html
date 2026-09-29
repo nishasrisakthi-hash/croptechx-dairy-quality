@@ -6,137 +6,179 @@
 <title>CropTechX | Smart Feed & Silage Quality</title>
 <meta name="description" content="Smart AI-enabled rapid feed and silage quality testing system for dairy farmers.">
 <style>
-:root{--navy:#071d38;--navy2:#0c2949;--green:#25b875;--green2:#58d991;--ink:#14243a;--muted:#718092;--line:#dfe5e8;--soft:#f4f7f6;--cream:#fff7df;--creamline:#e5b934;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.45}a{text-decoration:none;color:inherit}.container{width:min(1336px,86%);margin:auto}
-header{position:sticky;top:0;z-index:50;height:82px;background:rgba(7,29,56,.97);color:#fff}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:800}.brand-mark{font-size:25px;line-height:1}.links{display:flex;align-items:center;gap:28px;color:#d6deea;font-size:15px}.links a:hover{color:#fff}.nav-cta{background:#18a86d;padding:15px 22px;border-radius:12px;font-weight:800;color:#fff}
-.hero{min-height:700px;background:radial-gradient(circle at 79% 43%,rgba(39,184,117,.18),transparent 25%),linear-gradient(115deg,#061a34,#0a2442 65%,#10344b);color:#fff;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:70px 0 54px}.eyebrow,.section-kicker{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:900;color:#64d69a}.hero h1{font-size:clamp(48px,5.5vw,78px);line-height:.99;letter-spacing:-3.2px;margin:26px 0 28px;max-width:760px}.hero h1 .accent{color:#58d991}.hero-copy{font-size:18px;line-height:1.7;color:#b8c7d8;max-width:690px}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 21px;border-radius:12px;font-weight:800;border:1px solid rgba(255,255,255,.2)}.btn-primary{background:#16a96e;border-color:#16a96e}.btn-ghost{background:transparent;color:#fff}
-.hero-visual{position:relative;min-height:570px;display:flex;align-items:center;justify-content:center}.hero-panel{width:min(100%,900px);height:500px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.045);border-radius:32px;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.2);overflow:hidden}.phone{width:235px;height:450px;background:#fff;border:8px solid #061221;border-radius:35px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 20px 55px rgba(0,0,0,.38);padding:55px 20px 20px;color:#172538}.phone:before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:78px;height:18px;background:#061221;border-radius:20px}.phone small{font-size:10px;letter-spacing:1.5px;color:#84909e;font-weight:800}.phone .grade{font-size:76px;line-height:1;color:#1daf72;font-weight:900;margin:22px 0 6px;text-align:center}.phone .confidence{text-align:center;color:#39a86f;font-size:13px;font-weight:800}.phone hr{border:0;border-top:1px solid #dce1e5;margin:18px 0}.phone-row{display:flex;justify-content:space-between;font-size:12px;margin:14px 0}.phone-row b{font-size:12px}.float{position:absolute;border:1px solid rgba(255,255,255,.1);background:#102f4f;color:#e7eef6;border-radius:20px;padding:10px 15px;font-size:12px;font-weight:800}.float.a{right:20px;top:62px}.float.b{left:18px;top:175px}.float.c{right:15px;bottom:105px}.feed-pills{position:absolute;left:28px;top:28px;display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid rgba(255,255,255,.14);background:rgba(7,29,56,.35);border-radius:999px;padding:7px 12px;color:#cbd6e2;font-size:11px}.sample-icons{position:absolute;left:24px;bottom:58px;font-size:40px;max-width:180px;line-height:1.2}.qr{position:absolute;right:22px;bottom:55px;background:#fff;border-radius:16px;padding:12px;color:#101b28;text-align:center;font-weight:900}.qrbox{font-size:42px;line-height:.9}.hero-meta{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1)}.hero-meta div{padding:22px 15px;border-right:1px solid rgba(255,255,255,.08)}.hero-meta div:last-child{border-right:0}.hero-meta strong{display:block;font-size:16px}.hero-meta span{font-size:12px;color:#91a3b8}
-section{padding:88px 0}.light{background:#fff}.soft{background:var(--soft)}.dark{background:linear-gradient(120deg,#061b34,#0b2948);color:#fff}.section-title{font-size:clamp(42px,4.3vw,62px);line-height:1.02;letter-spacing:-2.4px;margin:14px 0 12px}.section-sub{color:#7d8a98;font-size:16px;max-width:820px}.dark .section-title{color:#fff}.dark .section-sub{color:#aebfd0}
-.quote{background:var(--cream);border-left:5px solid var(--creamline);border-radius:0 18px 18px 0;padding:31px 34px;margin:48px 0 36px}.quote small{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#8c7638;font-weight:900}.quote p{font-size:21px;line-height:1.45;font-weight:800;margin:13px 0 0;max-width:1100px}.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;min-height:225px}.card .emoji{font-size:29px;margin-bottom:24px}.card h3{font-size:18px;margin:0 0 10px}.card p{color:#74808c;margin:0;font-size:15px;line-height:1.65}.dark .card{background:#102f4f;border-color:rgba(255,255,255,.09)}.dark .card p{color:#afbfce}.dark .card h3{color:#fff}.dark .card .tag{background:rgba(88,217,145,.11);color:#62d99a}.tag{display:inline-block;margin-top:22px;background:#eaf8f1;color:#269565;border-radius:999px;padding:6px 11px;font-size:10px;font-weight:900;text-transform:uppercase}
-.solution-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:50px}.solution-card{border:1px solid rgba(255,255,255,.08);background:#102e4d;border-radius:20px;padding:23px;min-height:180px}.solution-card .n{color:#5dd995;font-size:11px;font-weight:900}.solution-card .emoji{font-size:24px;margin:15px 0}.solution-card h3{margin:0 0 8px;font-size:17px}.solution-card p{margin:0;color:#aebfd0;font-size:13px;line-height:1.55}
-
-.ai-demo{background:#f4f7f6}.demo-shell{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px}.demo-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}.demo-card.dark-demo{background:#102f4f;border-color:rgba(255,255,255,.08);color:#fff}.demo-label{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#2b9d70;font-weight:900}.dark-demo .demo-label{color:#64d69a}.upload-box{margin-top:18px;border:1.5px dashed #b8c7d0;border-radius:18px;padding:22px;text-align:center;background:#fbfdfc;cursor:pointer}.upload-box:hover{border-color:#2ab073;background:#f4fbf7}.upload-box input{display:none}.upload-icon{font-size:34px}.preview-wrap{margin-top:18px;display:none;border-radius:18px;overflow:hidden;background:#edf2f0;border:1px solid var(--line)}.preview-wrap img{display:block;width:100%;height:210px;object-fit:cover}.demo-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.demo-fields label{font-size:11px;color:#718092;font-weight:800}.demo-fields input,.demo-fields select{width:100%;margin-top:6px;padding:11px;border:1px solid var(--line);border-radius:11px;font:inherit;background:#fff}.demo-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.demo-btn{border:0;border-radius:12px;padding:13px 16px;font-weight:900;cursor:pointer}.demo-primary{background:#18a86d;color:#fff}.demo-secondary{background:#eaf8f1;color:#238e62}.demo-status{margin-top:12px;font-size:12px;color:#7b8894}.demo-result{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;margin-top:22px}.demo-grade{width:120px;height:120px;border-radius:28px;background:#eaf8f1;color:#1aa56b;display:grid;place-items:center;font-size:62px;font-weight:900}.demo-confidence{font-weight:900;color:#2aa16d}.demo-result-lines{border-top:1px solid rgba(255,255,255,.1);margin-top:14px;padding-top:8px}.demo-result-line{display:flex;justify-content:space-between;padding:9px 0;color:#b8c8d6;font-size:13px}.demo-result-line b{color:#fff}.demo-reco{margin-top:16px;padding:15px;border-radius:14px;background:rgba(88,217,145,.08);border:1px solid rgba(88,217,145,.14);color:#dce9e3;font-size:13px;line-height:1.55}.demo-note{margin-top:16px;font-size:11px;color:#7c8995}.dark-demo .demo-note{color:#91a6ba}.demo-progress{height:6px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin-top:12px}.demo-progress span{display:block;height:100%;width:0;background:#58d991;border-radius:99px;transition:width .5s}
-@media(max-width:1050px){.demo-shell{grid-template-columns:1fr}}
-
-.workflow{background:#fff}.workflow-list{max-width:980px;margin:52px auto 0}.workflow-row{display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:center;margin:14px 0}.step-num{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#e9f8f0;color:#28a66e;font-weight:900}.workflow-box{border:1px solid var(--line);border-radius:18px;padding:21px 24px}.workflow-box h3{margin:0 0 4px;font-size:17px}.workflow-box p{margin:0;color:#778391;font-size:14px}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}.feature-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;min-height:220px}.feature-card .emoji{font-size:28px;margin-bottom:24px}.feature-card h3{font-size:18px;margin:0 0 10px}.feature-card p{margin:0;color:#75818d;font-size:14px;line-height:1.6}.expected{background:linear-gradient(120deg,#061b34,#0b2948);color:#fff}.expected-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:18px;margin-top:48px}.result-box{background:#102f4f;border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:40px;min-height:420px}.result-label{font-size:11px;letter-spacing:1.2px;color:#b8c7d5;font-weight:900}.big-grade{font-size:108px;color:#58d991;font-weight:900;line-height:1;margin:28px 0 5px}.confidence{color:#62d99a;font-weight:800}.result-lines{border-top:1px solid rgba(255,255,255,.1);margin-top:18px;padding-top:10px}.result-line{display:flex;justify-content:space-between;padding:12px 0;color:#c3cfdb;font-size:14px}.result-line b{color:#fff}.side-results{display:grid;gap:14px}.mini-result{background:#102f4f;border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:25px;min-height:130px}.mini-result .emoji{font-size:23px}.mini-result h3{margin:9px 0 5px}.mini-result p{color:#91a6ba;font-size:13px;margin:0}
-.stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:42px}.stack-pill{border:1px solid var(--line);border-radius:15px;padding:15px 19px;background:#fff;font-weight:800;color:#283746;font-size:14px}.innovation{background:var(--soft)}.innovation-pills{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;max-width:1100px;margin:48px auto 0}.innovation-pill{border:1px solid var(--line);background:#fff;border-radius:22px;padding:24px 34px;min-width:170px;text-align:center;font-size:12px;font-weight:900;line-height:1.35}.innovation-note{text-align:center;color:#7c8791;margin-top:30px;font-size:14px}
-.roadmap-list{max-width:980px;margin:48px auto 0}.roadmap-row{display:grid;grid-template-columns:68px 1fr;gap:22px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:22px 20px;margin:14px 0;background:#fff}.roadmap-num{width:52px;height:52px;border-radius:50%;background:#eaf8f1;color:#2aa56e;display:grid;place-items:center;font-weight:900}.roadmap-status{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#2e9c70;font-weight:900}.roadmap-row h3{margin:4px 0;font-size:17px}.roadmap-row p{margin:0;color:#7a8793;font-size:13px}.team{background:#061b34;color:#fff}.team-box{border:1px solid rgba(255,255,255,.1);background:#102f4f;border-radius:24px;padding:38px;margin-top:45px}.team-box h3{font-size:25px;margin:0 0 10px}.team-box p{color:#b0c0cf;margin:0}.team-note{margin-top:20px;color:#68d89b;font-weight:800;font-size:13px}
-footer{background:#041329;color:#91a3b7;padding:28px 0;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px}.footer-row strong{color:#fff}
-@media(max-width:1050px){.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:520px}.cards-4{grid-template-columns:1fr 1fr}.solution-grid{grid-template-columns:1fr 1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.expected-grid{grid-template-columns:1fr}.links{gap:16px}.nav-cta{display:none}}
-@media(max-width:720px){.container{width:90%}.links{display:none}.hero h1{font-size:48px;letter-spacing:-2px}.hero{min-height:auto}.hero-grid{padding:58px 0}.hero-panel{height:450px}.phone{transform:translate(-50%,-50%) scale(.86)}.hero-meta{grid-template-columns:1fr 1fr}.hero-meta div:nth-child(2){border-right:0}.hero-meta div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}section{padding:68px 0}.cards-4,.feature-grid,.solution-grid{grid-template-columns:1fr}.quote{padding:25px}.quote p{font-size:18px}.workflow-row,.roadmap-row{grid-template-columns:52px 1fr;gap:14px}.step-num,.roadmap-num{width:48px;height:48px}.innovation-pill{min-width:145px;flex:1}.footer-row{flex-direction:column}}
+:root{
+  --navy:#14213d;--indigo:#3346a8;--teal:#0e9f9a;--amber:#e4a11b;
+  --bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#68738a;--line:#e5e9f2;
+  --good:#14804a;--warn:#b77908;--bad:#c23b3b;--shadow:0 18px 45px rgba(20,33,61,.10)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center;font-weight:900;color:var(--navy)}.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));display:grid;place-items:center;color:#fff;font-weight:900}.links{display:flex;gap:22px;font-size:14px;color:#4e5970}.links a:hover{color:var(--indigo)}
+.hero{padding:78px 0 54px;background:radial-gradient(circle at 80% 20%,#dff7f3 0,transparent 30%),linear-gradient(180deg,#fff 0,#f5f7fb 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.eyebrow{display:inline-flex;gap:8px;padding:7px 11px;border:1px solid #d9dff0;border-radius:999px;background:#fff;font-size:12px;font-weight:800;color:var(--indigo)}
+h1{font-size:clamp(38px,5vw,66px);line-height:1.02;margin:18px 0 18px;color:var(--navy);letter-spacing:-2px}.hero p{font-size:18px;color:var(--muted);max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:0;border-radius:13px;padding:13px 18px;font-weight:800;cursor:pointer}.primary{background:var(--navy);color:#fff}.secondary{background:#fff;border:1px solid var(--line);color:var(--navy)}
+.hero-card{background:linear-gradient(150deg,#14213d,#3346a8);border-radius:28px;padding:24px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-80px;top:-80px;background:rgba(14,159,154,.25)}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.metric{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:15px}.metric b{display:block;font-size:25px}.metric span{font-size:12px;opacity:.8}
+section{padding:72px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}.section-head h2{margin:0;color:var(--navy);font-size:34px}.section-head p{margin:0;color:var(--muted);max-width:650px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 28px rgba(20,33,61,.05)}.card h3{margin:8px 0}.card p{color:var(--muted);margin-bottom:0}.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#eaf7f5;color:var(--teal);font-size:21px;font-weight:900}
+.problem{background:var(--navy);color:#fff}.problem h2{color:#fff}.problem .section-head p{color:#c9d0e2}.problem .card{background:#1d2c4c;border-color:#344361}.problem .card p{color:#c9d0e2}
+.workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;position:relative}.step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:38px;color:var(--amber);font-weight:900;z-index:2}.num{font-size:12px;font-weight:900;color:var(--teal)}
+.demo{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow)}.demo-top{display:grid;grid-template-columns:1fr 1fr;gap:24px}.drop{border:2px dashed #b8c2d8;border-radius:18px;padding:34px;text-align:center;background:#fafbfe}.drop input{display:none}.upload-label{display:inline-block;background:var(--navy);color:#fff;padding:12px 16px;border-radius:12px;font-weight:800;cursor:pointer}.preview{margin-top:14px;max-width:100%;max-height:250px;border-radius:14px;display:none;margin-left:auto;margin-right:auto}.results{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{padding:15px;border-radius:14px;background:#f7f9fc;border:1px solid var(--line)}.result small{color:var(--muted);display:block}.result strong{font-size:20px}.grade{font-size:34px;font-weight:900;color:var(--good)}
+.report{margin-top:16px;padding:16px;border-radius:14px;background:#eefaf5;border:1px solid #cdeedf;color:#205d43}
+.table{width:100%;border-collapse:collapse}.table th,.table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.table th{color:var(--muted);font-size:13px}
+footer{background:#0e172b;color:#b9c2d6;padding:34px 0}.footer-grid{display:flex;justify-content:space-between;gap:20px}.footer-grid strong{color:#fff}
+@media(max-width:900px){.hero-grid,.demo-top{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.workflow{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}.links{display:none}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.results{grid-template-columns:1fr}section{padding:52px 0}h1{letter-spacing:-1px}}
 </style>
 </head>
 <body>
 <header><div class="container nav">
-<a class="brand" href="#home"><span class="brand-mark">🌾</span><span>CropTechX</span></a>
-<nav class="links"><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#ai-demo">AI Demo</a><a href="#workflow">Workflow</a><a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a><a class="nav-cta" href="#solution">Explore Solution →</a></nav>
+  <a class="brand" href="#home"><span class="logo">CX</span><span>CropTechX · Dairy Intelligence</span></a>
+  <nav class="links"><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#demo">AI Demo</a><a href="#features">Features</a><a href="#workflow">Workflow</a><a href="#impact">Impact</a></nav>
 </div></header>
 
 <main id="home">
-<section class="hero"><div class="container">
-<div class="hero-grid">
-<div>
-<div class="eyebrow">SMART INDIA HACKATHON 2026 · SOFTWARE</div>
-<h1>Smart <span class="accent">AI-Enabled Rapid</span> Feed &amp; Silage Quality Testing System</h1>
-<p class="hero-copy">A proposed digital platform designed to make feed and silage quality assessment faster, more accessible and farmer-friendly through AI image analysis, sensor-assisted quality parameters and instant digital reports.</p>
-<div class="actions"><a class="btn btn-primary" href="#solution">Explore Proposed Solution</a><a class="btn btn-ghost" href="#workflow">View Workflow</a></div>
-</div>
-<div class="hero-visual">
-<div class="hero-panel">
-<div class="feed-pills"><span class="pill">AI / Computer Vision</span><span class="pill">Sensor Data</span><span class="pill">Rapid Testing</span><span class="pill">Farmer-first</span></div>
-<div class="float a">🤖 AI Quality</div><div class="float b">💧 Moisture</div><div class="float c">🔗 Digital Report</div>
-<div class="phone"><small>AI QUALITY RESULT</small><div class="grade">Q1</div><div class="confidence">94% confidence</div><hr><div class="phone-row"><span>Moisture</span><b>34%</b></div><div class="phone-row"><span>Temperature</span><b>24°C</b></div><div class="phone-row"><span>pH</span><b>5.1</b></div><div class="phone-row"><span>Spoilage risk</span><b>Low</b></div><div style="margin-top:26px;text-align:center;font-size:10px;color:#8a949e">Example / prototype result</div></div>
-<div class="sample-icons">🌿 🟩<br>🌿 🟩 🟩</div><div class="qr"><div class="qrbox">▦</div><div style="font-size:10px;margin-top:4px">SCAN</div></div>
-</div></div>
-</div>
-<div class="hero-meta"><div><strong>Rapid Testing</strong><span>On-farm screening concept</span></div><div><strong>AI + Sensors</strong><span>Image and parameter fusion</span></div><div><strong>Farmer-first</strong><span>Simple digital results</span></div><div><strong>CropTechX</strong><span>Smart agriculture team</span></div></div>
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <span class="eyebrow">SMART INDIA HACKATHON · SIH26111 · SOFTWARE</span>
+    <h1>Smart AI-Enabled Rapid Feed & Silage Quality Testing</h1>
+    <p>A farmer-friendly concept for rapid feed and silage quality assessment using image-based AI analysis, quality classification, digital reports and decision support.</p>
+    <div class="actions"><a class="btn primary" href="#demo">Try AI Demo</a><a class="btn secondary" href="#workflow">Explore Workflow</a></div>
+  </div>
+  <div class="hero-card">
+    <div style="font-size:13px;opacity:.8;font-weight:800">FARMER QUALITY SNAPSHOT</div>
+    <h2 style="font-size:30px;margin:8px 0">Fast · Simple · Actionable</h2>
+    <div class="metric-grid">
+      <div class="metric"><b>Q1–Q4</b><span>Quality grades</span></div>
+      <div class="metric"><b>AI</b><span>Image analysis</span></div>
+      <div class="metric"><b>Instant</b><span>Digital report</span></div>
+      <div class="metric"><b>24/7</b><span>History & trends</span></div>
+    </div>
+  </div>
 </div></section>
 
-<section id="problem" class="light"><div class="container"><div class="section-kicker">01 &nbsp; WHY THIS MATTERS</div><h2 class="section-title">The Problem with Conventional Feed &amp; Silage Testing</h2><div class="quote"><small>PROBLEM CONTEXT</small><p>Feed and silage quality is often judged through visual inspection or delayed laboratory testing, making rapid, affordable and consistent on-farm decisions difficult for dairy farmers.</p></div><div class="cards-4">
-<div class="card"><div class="emoji">👁️</div><h3>Manual Assessment</h3><p>Farmers may depend on colour, smell, texture and experience when judging feed and silage quality.</p></div>
-<div class="card"><div class="emoji">⏱️</div><h3>Testing Delays</h3><p>Laboratory testing can take time, delaying decisions about feeding, storage and spoilage.</p></div>
-<div class="card"><div class="emoji">💰</div><h3>Cost &amp; Access</h3><p>Small and medium dairy farmers may not have convenient access to affordable rapid testing facilities.</p></div>
-<div class="card"><div class="emoji">⚠️</div><h3>Quality Risk</h3><p>Poor-quality feed or silage can contribute to feed wastage, animal-health concerns and production losses.</p></div>
-</div></div></section>
+<section id="problem" class="problem"><div class="container">
+  <div class="section-head"><div><h2>The problem</h2><p>Traditional feed and silage assessment can depend heavily on visual/manual inspection and laboratory testing, creating delays and uncertainty for farm-level decisions.</p></div></div>
+  <div class="grid">
+    <div class="card"><div class="icon">!</div><h3>Manual assessment</h3><p>Visual judgement can vary between people and may miss important quality differences.</p></div>
+    <div class="card"><div class="icon">⏱</div><h3>Slow testing</h3><p>Laboratory-oriented testing can take time and may be difficult to access for small and medium dairy farms.</p></div>
+    <div class="card"><div class="icon">₹</div><h3>Cost & access</h3><p>A practical on-farm approach can reduce dependence on repeated external testing for rapid screening.</p></div>
+  </div>
+</div></section>
 
-<section id="solution" class="dark"><div class="container"><div class="section-kicker">02 &nbsp; OUR PROPOSED SOLUTION</div><h2 class="section-title">From Feed Sample to Transparent Quality Information</h2><p class="section-sub">CropTechX combines AI-assisted image analysis with sensor parameters, quality classification, instant reporting and farmer decision support.</p><div class="solution-grid">
-<div class="solution-card"><div class="n">01</div><div class="emoji">📷</div><h3>Capture</h3><p>Capture or upload a feed or silage sample image.</p></div>
-<div class="solution-card"><div class="n">02</div><div class="emoji">🤖</div><h3>AI Analysis</h3><p>Process visual features such as colour and texture for proposed quality assessment.</p></div>
-<div class="solution-card"><div class="n">03</div><div class="emoji">💧</div><h3>Parameters</h3><p>Combine moisture, temperature, pH and other available measurements.</p></div>
-<div class="solution-card"><div class="n">04</div><div class="emoji">🏷️</div><h3>Quality Grade</h3><p>Generate an intended quality class and confidence output.</p></div>
-<div class="solution-card"><div class="n">05</div><div class="emoji">📄</div><h3>Instant Report</h3><p>Show results and practical recommendations through a digital interface.</p></div>
-</div></div></section>
+<section id="solution"><div class="container">
+  <div class="section-head"><div><h2>Our proposed solution</h2><p>A modular digital system combining image analysis, quality classification, farmer recommendations and instant reporting. The current website includes a demo simulation; a trained ML model can be connected later.</p></div></div>
+  <div class="grid">
+    <div class="card"><div class="icon">AI</div><h3>AI image analysis</h3><p>Analyse feed or silage images for visible quality-related features such as colour and texture.</p></div>
+    <div class="card"><div class="icon">✓</div><h3>Rapid classification</h3><p>Present an interpretable quality grade with a confidence score for the demo result.</p></div>
+    <div class="card"><div class="icon">▣</div><h3>Digital decision support</h3><p>Convert the analysis into recommendations, reports, history and trend views for farmers.</p></div>
+  </div>
+</div></section>
 
-<section id="ai-demo" class="ai-demo"><div class="container"><div class="section-kicker">INTERACTIVE PROTOTYPE · AI DEMO</div><h2 class="section-title">Test a Feed or Silage Sample</h2><p class="section-sub">Upload a sample image, add the available sensor readings, and run the same farmer-facing demo flow: image review → quality classification → confidence → risk → recommendation.</p><div class="demo-shell">
-<div class="demo-card"><div class="demo-label">01 · SAMPLE INPUT</div><div class="upload-box" id="uploadBox"><label for="sampleImage"><div class="upload-icon">📷</div><strong>Upload feed / silage image</strong><div style="color:#7b8894;font-size:12px;margin-top:6px">JPG, PNG or WEBP · tap to choose an image</div></label><input id="sampleImage" type="file" accept="image/*"></div><div class="preview-wrap" id="previewWrap"><img id="preview" alt="Selected feed or silage sample"></div><div class="demo-fields"><label>Moisture %<input id="moisture" type="number" min="0" max="100" step="0.1" value="34"></label><label>Temperature °C<input id="temperature" type="number" step="0.1" value="24"></label><label>pH<input id="ph" type="number" min="0" max="14" step="0.1" value="5.1"></label></div><div class="demo-actions"><button class="demo-btn demo-secondary" id="sampleBtn" type="button">Load Demo Sample</button><button class="demo-btn demo-primary" id="analyzeBtn" type="button">Run AI Analysis →</button></div><div class="demo-status" id="demoStatus">Prototype mode · no real laboratory or trained model is connected yet.</div></div>
-<div class="demo-card dark-demo"><div class="demo-label">02 · AI-ASSISTED RESULT</div><div class="demo-result"><div class="demo-grade" id="demoGrade">Q1</div><div><div class="demo-confidence" id="demoConfidence">94% confidence</div><div class="demo-progress"><span id="confidenceBar" style="width:94%"></span></div><div class="demo-result-lines"><div class="demo-result-line"><span>Moisture</span><b id="outMoisture">34%</b></div><div class="demo-result-line"><span>Temperature</span><b id="outTemp">24°C</b></div><div class="demo-result-line"><span>pH</span><b id="outPh">5.1</b></div><div class="demo-result-line"><span>Spoilage risk</span><b id="outRisk">Low</b></div></div></div></div><div class="demo-reco" id="recommendation">Recommendation: Suitable for use based on this illustrative prototype result. Continue normal storage monitoring and verify with laboratory testing where required.</div><div class="demo-note">Illustrative prototype output for the hackathon portfolio — values are simulated and are not experimentally validated.</div></div>
-</div></div></section>
+<section id="demo"><div class="container">
+  <div class="section-head"><div><h2>Interactive AI analysis demo</h2><p>Select Feed or Silage, upload an image and run the prototype simulation. Results are demonstrative until a real ML model is connected.</p></div></div>
+  <div class="demo">
+    <div class="demo-top">
+      <div class="drop">
+        <h3>1 · Sample input</h3>
+        <select id="sampleType" style="padding:11px;border-radius:10px;border:1px solid #d9deea;margin:8px">
+          <option>Feed</option><option>Silage</option>
+        </select>
+        <br><br>
+        <label class="upload-label" for="file">Upload image</label>
+        <input id="file" type="file" accept="image/*">
+        <img id="preview" class="preview" alt="Selected sample preview">
+        <p id="fileName" style="color:#68738a;font-size:13px">No image selected</p>
+        <button class="btn primary" id="analyze" type="button">Run demo analysis</button>
+      </div>
+      <div>
+        <h3>2 · Quality report</h3>
+        <div class="results">
+          <div class="result"><small>Quality grade</small><div class="grade" id="grade">—</div></div>
+          <div class="result"><small>Confidence</small><strong id="confidence">—</strong></div>
+          <div class="result"><small>Moisture</small><strong id="moisture">—</strong></div>
+          <div class="result"><small>Temperature</small><strong id="temp">—</strong></div>
+          <div class="result"><small>pH</small><strong id="ph">—</strong></div>
+          <div class="result"><small>Spoilage risk</small><strong id="risk">—</strong></div>
+          <div class="result"><small>Visual colour</small><strong id="colour">—</strong></div>
+          <div class="result"><small>Texture</small><strong id="texture">—</strong></div>
+        </div>
+        <div class="report" id="recommendation">Upload a sample and run the demo to generate a recommendation.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
 
-<section id="workflow" class="workflow"><div class="container"><div class="section-kicker">03 &nbsp; SYSTEM WORKFLOW</div><h2 class="section-title">How the Proposed System Works</h2><div class="workflow-list">
-<div class="workflow-row"><div class="step-num">01</div><div class="workflow-box"><h3>Sample Collection</h3><p>The farmer collects a feed or silage sample for assessment.</p></div></div>
-<div class="workflow-row"><div class="step-num">02</div><div class="workflow-box"><h3>Image &amp; Sensor Acquisition</h3><p>The system captures a sample image and collects available moisture, temperature and pH parameters.</p></div></div>
-<div class="workflow-row"><div class="step-num">03</div><div class="workflow-box"><h3>AI-Based Quality Analysis</h3><p>Image processing and feature extraction evaluate visible quality-related characteristics.</p></div></div>
-<div class="workflow-row"><div class="step-num">04</div><div class="workflow-box"><h3>Quality Classification</h3><p>The proposed model classifies the sample into predefined quality grades with a confidence score.</p></div></div>
-<div class="workflow-row"><div class="step-num">05</div><div class="workflow-box"><h3>Instant Digital Report</h3><p>The interface presents quality, key parameters, risk indicators and suggested actions.</p></div></div>
-<div class="workflow-row"><div class="step-num">06</div><div class="workflow-box"><h3>Farmer Dashboard</h3><p>Results can be stored for history, trends, alerts and farm-level monitoring.</p></div></div>
-</div></div></section>
+<section id="features"><div class="container">
+  <div class="section-head"><div><h2>Feature suite</h2><p>Designed around the requirements you selected, with sensor-data dashboards intentionally excluded from this portfolio.</p></div></div>
+  <div class="grid">
+    <div class="card"><div class="icon">◉</div><h3>Feed Quality Analysis</h3><p>Quick screening workflow for feed samples.</p></div>
+    <div class="card"><div class="icon">◉</div><h3>Silage Quality Analysis</h3><p>Dedicated silage assessment flow.</p></div>
+    <div class="card"><div class="icon">AI</div><h3>AI Image Analysis</h3><p>Image-based feature assessment and simulated prediction.</p></div>
+    <div class="card"><div class="icon">%</div><h3>Moisture Monitoring</h3><p>Display moisture-related quality information.</p></div>
+    <div class="card"><div class="icon">°</div><h3>Temperature Monitoring</h3><p>Include temperature in the report interface.</p></div>
+    <div class="card"><div class="icon">pH</div><h3>pH Monitoring</h3><p>Present pH as a quality parameter.</p></div>
+    <div class="card"><div class="icon">Q</div><h3>Quality Classification</h3><p>Excellent, Good, Moderate or Poor.</p></div>
+    <div class="card"><div class="icon">▤</div><h3>Instant Digital Report</h3><p>Generate a concise quality summary.</p></div>
+    <div class="card"><div class="icon">→</div><h3>Recommendations</h3><p>Provide practical next-step guidance.</p></div>
+    <div class="card"><div class="icon">↺</div><h3>Test History</h3><p>Keep a record of prior demo analyses.</p></div>
+    <div class="card"><div class="icon">▦</div><h3>Farmer Dashboard</h3><p>Bring analysis, reports and alerts together.</p></div>
+    <div class="card"><div class="icon">↗</div><h3>Trends & Analytics</h3><p>Visualize quality changes over time.</p></div>
+    <div class="card"><div class="icon">!</div><h3>Poor Quality Alerts</h3><p>Highlight elevated spoilage or quality risk.</p></div>
+  </div>
+</div></section>
 
-<section id="features" class="soft"><div class="container"><div class="section-kicker">04 &nbsp; PLATFORM FEATURES</div><h2 class="section-title">More Than Quality Testing</h2><p class="section-sub">The concept extends rapid testing into an end-to-end farmer information platform.</p><div class="feature-grid">
-<div class="feature-card"><div class="emoji">🤖</div><h3>AI Feed Quality Analysis</h3><p>AI-assisted assessment of feed quality using image-based visual features and a proposed classification model.</p><span class="tag">Core</span></div>
-<div class="feature-card"><div class="emoji">🌿</div><h3>Silage Quality Analysis</h3><p>Dedicated workflow for assessing silage condition and identifying potential quality concerns.</p><span class="tag">Core</span></div>
-<div class="feature-card"><div class="emoji">💧</div><h3>Moisture Detection</h3><p>Capture moisture-related information as a key quality parameter.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">🌡️</div><h3>Temperature Monitoring</h3><p>Include temperature readings in the quality report and monitoring view.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">🧪</div><h3>pH Monitoring</h3><p>Use pH as an additional parameter for silage quality assessment.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">📄</div><h3>Instant Digital Report</h3><p>Show quality grade, key parameters, confidence and practical recommendations.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">📊</div><h3>Test History</h3><p>Maintain previous assessments to support comparison and farm-level record keeping.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">📈</div><h3>Trends &amp; Analytics</h3><p>Present changes in quality parameters over time in a simple dashboard.</p><span class="tag">Proposed</span></div>
-<div class="feature-card"><div class="emoji">⚠️</div><h3>Poor Quality Alerts</h3><p>Highlight elevated spoilage or quality-risk indicators for additional inspection.</p><span class="tag">Proposed</span></div>
-</div></div></section>
+<section id="workflow"><div class="container">
+  <div class="section-head"><div><h2>System workflow</h2><p>The workflow follows the structure of your proposed-solution references while adapting it for an interactive website.</p></div></div>
+  <div class="workflow">
+    <div class="step"><div class="num">01</div><h3>Sample</h3><p>Feed / silage sample</p></div>
+    <div class="step"><div class="num">02</div><h3>Image</h3><p>Upload sample image</p></div>
+    <div class="step"><div class="num">03</div><h3>AI analysis</h3><p>Feature assessment</p></div>
+    <div class="step"><div class="num">04</div><h3>Classification</h3><p>Quality grade</p></div>
+    <div class="step"><div class="num">05</div><h3>Report</h3><p>Result + recommendation</p></div>
+    <div class="step"><div class="num">06</div><h3>Dashboard</h3><p>History + trends</p></div>
+  </div>
+</div></section>
 
-<section class="expected"><div class="container"><div class="section-kicker">05 &nbsp; EXPECTED / DEMO OUTPUT</div><h2 class="section-title">What the User Is Intended to See</h2><p class="section-sub">The values below are example interface outputs from the concept, not experimentally validated results.</p><div class="expected-grid"><div class="result-box"><div class="result-label">AI QUALITY RESULT · EXAMPLE</div><div class="big-grade">Q1</div><div class="confidence">94% confidence</div><div class="result-lines"><div class="result-line"><span>Moisture</span><b>34%</b></div><div class="result-line"><span>Temperature</span><b>24°C</b></div><div class="result-line"><span>pH</span><b>5.1</b></div><div class="result-line"><span>Spoilage risk</span><b>Low</b></div></div><div style="margin-top:20px;color:#7fa0bb;font-size:11px;letter-spacing:1px">ILLUSTRATIVE PROTOTYPE RESULT</div></div><div class="side-results"><div class="mini-result"><div class="emoji">📅</div><h3>Example: 30 days</h3><p>Planned best-before / storage information</p></div><div class="mini-result"><div class="emoji">🔗</div><h3>Digital report</h3><p>Farmer · Sample · Storage · Recommendation</p></div><div class="mini-result"><div class="emoji">🎙️</div><h3>Farmer-friendly access</h3><p>Planned web/mobile interface with accessible interaction</p></div></div></div></div></section>
+<section id="impact"><div class="container">
+  <div class="section-head"><div><h2>Expected impact</h2><p>These are intended benefits of the proposed system, not measured outcomes of a deployed product.</p></div></div>
+  <div class="grid">
+    <div class="card"><div class="icon">♥</div><h3>Animal health support</h3><p>Better visibility into feed and silage quality can support more informed feeding decisions.</p></div>
+    <div class="card"><div class="icon">↗</div><h3>Milk-yield support</h3><p>Better feed-management decisions are intended to support dairy productivity.</p></div>
+    <div class="card"><div class="icon">↓</div><h3>Waste reduction</h3><p>Early identification of poor-quality samples can support better feed-management decisions.</p></div>
+  </div>
+</div></section>
 
-<section class="light"><div class="container"><div class="section-kicker">06 &nbsp; PROPOSED TECHNOLOGY</div><h2 class="section-title">Technology Stack</h2><div class="stack"><span class="stack-pill">AI / Machine Learning</span><span class="stack-pill">Computer Vision</span><span class="stack-pill">Image Processing</span><span class="stack-pill">Sensor Integration</span><span class="stack-pill">IoT / ESP32</span><span class="stack-pill">Web Application</span><span class="stack-pill">Python</span><span class="stack-pill">Flask / API</span><span class="stack-pill">Firebase / MySQL</span><span class="stack-pill">Power BI / Analytics</span></div></div></section>
-
-<section class="innovation"><div class="container"><div class="section-kicker">07 &nbsp; INNOVATION</div><h2 class="section-title">Beyond Basic Feed Testing</h2><div class="innovation-pills"><div class="innovation-pill">AI<br>QUALITY CLASSIFICATION</div><div class="innovation-pill">SPOILAGE<br>RISK DETECTION</div><div class="innovation-pill">SENSOR + IMAGE<br>FUSION</div><div class="innovation-pill">INSTANT<br>DIGITAL REPORT</div><div class="innovation-pill">FARMER<br>RECOMMENDATIONS</div><div class="innovation-pill">HISTORY &amp;<br>ANALYTICS</div></div><p class="innovation-note">The proposed concept connects rapid testing, quality information, storage awareness and farmer decision support in one platform.</p></div></section>
-
-<section id="roadmap" class="light"><div class="container"><div class="section-kicker">08 &nbsp; DEVELOPMENT ROADMAP</div><h2 class="section-title">From Concept to Prototype</h2><div class="roadmap-list">
-<div class="roadmap-row"><div class="roadmap-num">01</div><div><div class="roadmap-status">Current</div><h3>Concept &amp; Requirement Analysis</h3><p>Define the problem, proposed modules and farmer needs.</p></div></div>
-<div class="roadmap-row"><div class="roadmap-num">02</div><div><div class="roadmap-status">Current / Next</div><h3>UI &amp; System Design</h3><p>Design the sample flow, grading screen, report and dashboard experience.</p></div></div>
-<div class="roadmap-row"><div class="roadmap-num">03</div><div><div class="roadmap-status">Planned</div><h3>Dataset &amp; Image Processing</h3><p>Prepare feed and silage image data and the proposed processing pipeline.</p></div></div>
-<div class="roadmap-row"><div class="roadmap-num">04</div><div><div class="roadmap-status">Planned</div><h3>AI Quality Classification Module</h3><p>Develop and test the proposed feed and silage quality assessment model.</p></div></div>
-<div class="roadmap-row"><div class="roadmap-num">05</div><div><div class="roadmap-status">Planned</div><h3>Sensor &amp; Reporting Modules</h3><p>Integrate moisture, temperature, pH and digital reporting workflows.</p></div></div>
-<div class="roadmap-row"><div class="roadmap-num">06</div><div><div class="roadmap-status">Future</div><h3>Farmer Dashboard &amp; Field Validation</h3><p>Connect history, trends, alerts and practical on-farm validation.</p></div></div>
-</div></div></section>
-
-<section id="team" class="team"><div class="container"><div class="section-kicker">09 &nbsp; TEAM</div><h2 class="section-title">CropTechX</h2><div class="team-box"><h3>Smart Feed &amp; Silage Quality Testing System</h3><p>Team member details can be placed here during the final editing step, keeping the same CropTechX team identity as the reference portfolio.</p><div class="team-note">SMART INDIA HACKATHON 2026 · CROPTECHX</div></div></div></section>
+<section><div class="container">
+  <div class="section-head"><div><h2>Technology direction</h2><p>The architecture is kept modular so the demo can evolve into a real AI product.</p></div></div>
+  <table class="table"><tr><th>Layer</th><th>Prototype direction</th></tr>
+    <tr><td>Frontend</td><td>Responsive HTML, CSS and JavaScript</td></tr>
+    <tr><td>AI / ML</td><td>Demo simulation now; trained image model can be integrated later</td></tr>
+    <tr><td>Reports</td><td>Browser-based digital report interface</td></tr>
+    <tr><td>Future backend</td><td>API + database for real predictions, accounts and persistent history</td></tr>
+  </table>
+</div></section>
 </main>
-<footer><div class="container footer-row"><div><strong>CropTechX</strong><br>Smart Technology · Better Feed · Healthier Cows · Prosperous Farmers</div><div>AI-enabled rapid feed &amp; silage quality testing concept</div></div></footer>
+
+<footer><div class="container footer-grid"><div><strong>CropTechX</strong><br>Smart Feed & Silage Quality Intelligence</div><div>Team details and official prototype link can be added in the final editing step.</div></div></footer>
+
 <script>
-(function(){
-  const fileInput=document.getElementById('sampleImage'), preview=document.getElementById('preview'), wrap=document.getElementById('previewWrap');
-  const status=document.getElementById('demoStatus');
-  const moisture=document.getElementById('moisture'), temperature=document.getElementById('temperature'), ph=document.getElementById('ph');
-  const grade=document.getElementById('demoGrade'), confidence=document.getElementById('demoConfidence'), bar=document.getElementById('confidenceBar');
-  const outM=document.getElementById('outMoisture'), outT=document.getElementById('outTemp'), outP=document.getElementById('outPh'), risk=document.getElementById('outRisk'), rec=document.getElementById('recommendation');
-  function showImage(file){ if(!file) return; const url=URL.createObjectURL(file); preview.src=url; wrap.style.display='block'; status.textContent='Sample image loaded. Add/adjust sensor readings, then run the prototype analysis.'; }
-  fileInput.addEventListener('change',e=>showImage(e.target.files[0]));
-  document.getElementById('sampleBtn').addEventListener('click',()=>{
-    const c=document.createElement('canvas'); c.width=900; c.height=560; const x=c.getContext('2d');
-    const g=x.createLinearGradient(0,0,900,560); g.addColorStop(0,'#355f3e'); g.addColorStop(1,'#a98c43'); x.fillStyle=g; x.fillRect(0,0,900,560);
-    for(let i=0;i<42;i++){ const px=40+(i*83)%820, py=60+(i*137)%460, r=18+(i%5)*6; x.beginPath(); x.fillStyle=i%4===0?'#6d8f42':(i%3===0?'#b69a52':'#8f7a3e'); x.arc(px,py,r,0,Math.PI*2); x.fill(); }
-    preview.src=c.toDataURL('image/jpeg',.86); wrap.style.display='block'; status.textContent='Demo sample loaded. Click Run AI Analysis to generate the prototype result.';
-  });
-  document.getElementById('analyzeBtn').addEventListener('click',()=>{
-    let m=parseFloat(moisture.value)||0, t=parseFloat(temperature.value)||0, p=parseFloat(ph.value)||0;
-    let score=94; if(m>42) score-=Math.min(22,(m-42)*1.5); if(m<25) score-=Math.min(10,(25-m)*1.1); if(t>30) score-=Math.min(15,(t-30)*1.5); if(p<4.2||p>5.8) score-=12;
-    score=Math.max(58,Math.min(98,Math.round(score)));
-    let g='Q1', r='Low'; if(score<88){g='Q2';r='Moderate';} if(score<75){g='Q3';r='Elevated';} if(score<65){g='Q4';r='High';}
-    grade.textContent=g; confidence.textContent=score+'% confidence'; bar.style.width=score+'%'; outM.textContent=m.toFixed(1)+'%'; outT.textContent=t.toFixed(1)+'°C'; outP.textContent=p.toFixed(1); risk.textContent=r;
-    const action = g==='Q1' ? 'Suitable for use based on this illustrative prototype result. Continue normal storage monitoring.' : g==='Q2' ? 'Review moisture and storage conditions before feeding; monitor the sample closely.' : g==='Q3' ? 'Inspect for spoilage and storage issues. Consider segregation or further testing before use.' : 'Do not rely on this prototype result alone. Isolate the sample and seek confirmatory testing before feeding.';
-    rec.textContent='Recommendation: '+action; status.textContent='Prototype analysis complete · result generated from the entered parameters and demo logic.';
-  });
-})();
+const file=document.getElementById('file'), preview=document.getElementById('preview'), fileName=document.getElementById('fileName');
+file.addEventListener('change',()=>{const f=file.files[0]; if(!f)return; fileName.textContent=f.name; preview.src=URL.createObjectURL(f); preview.style.display='block';});
+document.getElementById('analyze').addEventListener('click',()=>{
+  const type=document.getElementById('sampleType').value;
+  const grades=[
+    {g:'Good',c:'91%',m:type==='Feed'?'32%':'36%',t:'24°C',p:'5.2',r:'Low',co:'Healthy green',tx:'Firm / uniform',rec:'Sample appears suitable for continued use in this prototype assessment. Store under appropriate conditions and monitor for visible spoilage.'},
+    {g:'Moderate',c:'84%',m:type==='Feed'?'38%':'42%',t:'27°C',p:'5.0',r:'Medium',co:'Mixed green',tx:'Slightly uneven',rec:'Consider reviewing storage conditions and moisture management before use. This demo result should not replace laboratory testing.'},
+    {g:'Poor',c:'88%',m:type==='Feed'?'46%':'49%',t:'31°C',p:'4.4',r:'High',co:'Dark / uneven',tx:'Loose / inconsistent',rec:'Potential quality concern detected in the demo. Isolate the sample for further inspection and confirm with an appropriate laboratory test.'}
+  ];
+  const r=grades[Math.floor(Math.random()*grades.length)];
+  document.getElementById('grade').textContent=r.g; document.getElementById('confidence').textContent=r.c;
+  document.getElementById('moisture').textContent=r.m; document.getElementById('temp').textContent=r.t;
+  document.getElementById('ph').textContent=r.p; document.getElementById('risk').textContent=r.r;
+  document.getElementById('colour').textContent=r.co; document.getElementById('texture').textContent=r.tx;
+  document.getElementById('recommendation').textContent='AI DEMO · '+type+' sample: '+r.rec;
+});
 </script>
-</body>
-</html>
+</body></html>
